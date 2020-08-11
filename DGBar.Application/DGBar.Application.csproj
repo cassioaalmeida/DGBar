@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Interfaces\**" />
+    <Content Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <None Remove="Interfaces\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Autofac" Version="5.2.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.6">
@@ -25,10 +32,6 @@
     <ProjectReference Include="..\DGBar.Infrastructure.CrossCutting.IOC\DGBar.Infrastructure.CrossCutting.IOC.csproj" />
     <ProjectReference Include="..\DGBar.Infrastructure.Data\DGBar.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\DGBar.Service\DGBar.Service.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
   </ItemGroup>
 
 
