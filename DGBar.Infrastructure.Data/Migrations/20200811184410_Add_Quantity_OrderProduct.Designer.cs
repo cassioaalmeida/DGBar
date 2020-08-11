@@ -3,14 +3,16 @@ using System;
 using DGBar.Infrastructure.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DGBar.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(DGBar.Infrastructure.Data.Context.Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20200811184410_Add_Quantity_OrderProduct")]
+    partial class Add_Quantity_OrderProduct
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
