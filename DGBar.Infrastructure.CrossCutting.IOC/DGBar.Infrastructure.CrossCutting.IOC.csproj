@@ -5,16 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentValidation.AspNetCore" Version="9.1.1" />
+    <PackageReference Include="Autofac" Version="5.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DGBar.Domain\DGBar.Domain.csproj" />
     <ProjectReference Include="..\DGBar.Infrastructure.Data\DGBar.Infrastructure.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\DGBar.Service\DGBar.Service.csproj" />
   </ItemGroup>
 
 </Project>

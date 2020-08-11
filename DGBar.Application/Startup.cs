@@ -2,7 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac;
+using DGBar.Domain.Entities;
+using DGBar.Domain.Interfaces;
+using DGBar.Infrastructure.CrossCutting.IOC;
 using DGBar.Infrastructure.Data.Context;
+using DGBar.Infrastructure.Data.Repository;
+using DGBar.Domain.Interfaces.Services;
+using DGBar.Service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,6 +38,10 @@ namespace DGBar.Application
             services.AddDbContext<Context>(options =>
                 options.UseSqlite(connection)
             );
+            //services.AddServiceDependency();
+            //services.AddScoped<IProductService, ProductService>();
+            //services.AddTransient<IBaseRepository<Product>, ProductRepository>();
+            //services.AddScoped(typeof(IBaseRepository<Product>), typeof(BaseRepository<Product>));
 
             services.AddControllers();
         }
@@ -53,6 +64,10 @@ namespace DGBar.Application
             {
                 endpoints.MapControllers();
             });
+        }
+        public void ConfigureContainer(ContainerBuilder Builder)
+        {
+            Builder.RegisterModule(new ModuleIOC());
         }
     }
 }

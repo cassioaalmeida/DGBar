@@ -8,52 +8,44 @@ using System.Linq;
 
 namespace DGBar.Infrastructure.Data.Repository
 {
-    class BaseRepository<T> : IBaseRepository<T> where T : class
+    public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
         public Context.Context context;
 
+        private readonly Context.Context _context;
+
+        public BaseRepository(Context.Context Context)
+        {
+            _context = Context;
+        }
+
         public IEnumerable<T> GetAll()
         {
-            using (context = new Context.Context())
-            {
-                return context.Set<T>().ToList();
-            }
+            return _context.Set<T>().ToList();
         }
 
         public T GetById(int id)
         {
-            using (context = new Context.Context())
-            {
-                return context.Set<T>().Find(id);
-            }
+            return _context.Set<T>().Find(id);
         }
 
         public void Add(T entity)
         {
-            using (context = new Context.Context())
-            {
-                context.Set<T>().Add(entity);
-                context.SaveChanges();
-            }
+            _context.Set<T>().Add(entity);
+            _context.SaveChanges();
         }
 
         public void Edit(T entity)
         {
-            using (context = new Context.Context())
-            {
-                context.Entry<T>(entity).State = EntityState.Modified;
-                context.SaveChanges();
-            }
+            _context.Entry<T>(entity).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
         public void Delete(T entity)
         {
-            using (context = new Context.Context())
-            {
-                context.Set<T>().Attach(entity);
-                context.Set<T>().Remove(entity);
-                context.SaveChanges();
-            }
+            _context.Set<T>().Attach(entity);
+            _context.Set<T>().Remove(entity);
+            _context.SaveChanges();
         }
     }
 }

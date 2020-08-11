@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Service", "DGBar.Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Infrastructure.Data", "DGBar.Infrastructure.Data\DGBar.Infrastructure.Data.csproj", "{F48F5A17-4869-45C7-8013-7BAD7AFED08D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGBar.Infrastructure.CrossCutting.IOC", "DGBar.Infrastructure.CrossCutting.IOC\DGBar.Infrastructure.CrossCutting.IOC.csproj", "{09B85DB5-8DD8-4A70-BBC3-B010C29C2A8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{F48F5A17-4869-45C7-8013-7BAD7AFED08D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F48F5A17-4869-45C7-8013-7BAD7AFED08D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F48F5A17-4869-45C7-8013-7BAD7AFED08D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B85DB5-8DD8-4A70-BBC3-B010C29C2A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B85DB5-8DD8-4A70-BBC3-B010C29C2A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B85DB5-8DD8-4A70-BBC3-B010C29C2A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B85DB5-8DD8-4A70-BBC3-B010C29C2A8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{214AE0FA-1125-4C3E-9536-C25339338470} = {24D663DE-D651-44C9-B101-E4813AE4DA31}
 		{6C59D8F2-EEC1-4FE0-9045-C2F38C24AC88} = {4AC864A7-7625-40F4-8182-1BAF03BD1204}
 		{F48F5A17-4869-45C7-8013-7BAD7AFED08D} = {6580C59A-C5D8-4A80-A65E-4FAE60E33F19}
+		{09B85DB5-8DD8-4A70-BBC3-B010C29C2A8C} = {03977C0F-1BEB-4515-BFC1-972BEC59455E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A1ED296-AE33-4200-951D-D35AC89DB793}

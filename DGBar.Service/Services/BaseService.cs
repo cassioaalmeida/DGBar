@@ -1,5 +1,5 @@
 ﻿using DGBar.Domain.Interfaces;
-using DGBar.Service.Interfaces;
+using DGBar.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;

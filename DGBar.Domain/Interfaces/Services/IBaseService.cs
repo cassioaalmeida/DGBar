@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DGBar.Service.Interfaces
+namespace DGBar.Domain.Interfaces.Services
 {
     public interface IBaseService<T> where T : class
     {
