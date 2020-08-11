@@ -9,36 +9,36 @@ namespace DGBar.Service.Services
 {
     public class OrderService : IOrderService
     {
-        private readonly IOrderService _orderService;
+        private readonly IOrderRepository _orderRepository;
 
-        public OrderService(IOrderService OrderService)
+        public OrderService(IOrderRepository OrderRepository)
         {
-            _orderService = OrderService;
+            _orderRepository = OrderRepository;
         }
 
         public void Add(Order obj)
         {
-            _orderService.Add(obj);
+            _orderRepository.Add(obj);
         }
     
         public IEnumerable<Order> GetAll()
         {
-            return _orderService.GetAll();
+            return _orderRepository.GetAll();
         }
 
         public Order GetById(int id)
         {
-            return _orderService.GetById(id);
+            return _orderRepository.GetById(id);
         }
 
         public void Delete(Order obj)
         {
-            _orderService.Delete(obj);
+            _orderRepository.Delete(obj);
         }
 
         public void Edit(Order obj)
         {
-            _orderService.Edit(obj);
+            _orderRepository.Edit(obj);
         }
     }
 }

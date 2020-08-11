@@ -43,35 +43,6 @@ namespace DGBar.Application.Controllers
             return product;
         }
 
-        // PUT: api/Products/5
-        [HttpPut("{id}")]
-        public IActionResult PutProduct(int id, Product product)
-        {
-            if (id != product.Id)
-            {
-                return BadRequest();
-            }
-
-
-            try
-            {
-                _ProductService.Edit(product);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProductExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
         // POST: api/Products
         [HttpPost]
         public ActionResult<Product> PostProduct([FromBody] Product product)
@@ -79,26 +50,6 @@ namespace DGBar.Application.Controllers
             _ProductService.Add(product);
 
             return CreatedAtAction("GetProduct", new { id = product.Id }, product);
-        }
-
-        // DELETE: api/Products/5
-        [HttpDelete("{id}")]
-        public ActionResult<Product> DeleteProduct(int id)
-        {
-            Product product = _ProductService.GetById(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            _ProductService.Delete(product);
-
-            return product;
-        }
-
-        private bool ProductExists(int id)
-        {
-            return _ProductService.GetById(id)!=null;
         }
     }
 }
