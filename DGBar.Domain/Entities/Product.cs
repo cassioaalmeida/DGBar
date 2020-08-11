@@ -4,10 +4,10 @@ using System.Text;
 
 namespace DGBar.Domain.Entities
 {
-    class Product :BaseEntity
+    public class Product :BaseEntity
     {
         public string Name { get; set; }
         public double Price { get; set; }
-        public List<Order> Orders { get; set; }
+        public List<OrderProduct> OrderProducts { get; set; }
     }
 }

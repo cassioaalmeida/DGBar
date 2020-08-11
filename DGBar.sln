@@ -15,13 +15,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{03977C0F-1BEB-4515-BFC1-972BEC59455E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGBar.Application", "DGBar.Application\DGBar.Application.csproj", "{917FF855-F1A7-4BAF-8044-6A4D45BA5002}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Application", "DGBar.Application\DGBar.Application.csproj", "{917FF855-F1A7-4BAF-8044-6A4D45BA5002}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGBar.Domain", "DGBar.Domain\DGBar.Domain.csproj", "{214AE0FA-1125-4C3E-9536-C25339338470}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Domain", "DGBar.Domain\DGBar.Domain.csproj", "{214AE0FA-1125-4C3E-9536-C25339338470}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGBar.Service", "DGBar.Service\DGBar.Service.csproj", "{6C59D8F2-EEC1-4FE0-9045-C2F38C24AC88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Service", "DGBar.Service\DGBar.Service.csproj", "{6C59D8F2-EEC1-4FE0-9045-C2F38C24AC88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGBar.Infrastructure.Data", "DGBar.Infrastructure.Data\DGBar.Infrastructure.Data.csproj", "{F48F5A17-4869-45C7-8013-7BAD7AFED08D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Infrastructure.Data", "DGBar.Infrastructure.Data\DGBar.Infrastructure.Data.csproj", "{F48F5A17-4869-45C7-8013-7BAD7AFED08D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
-    <Folder Include="Interfaces\" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.1.1" />
   </ItemGroup>
 
 </Project>
