@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DGBar.Domain.Interfaces
+namespace DGBar.Service.Interfaces
 {
-    public interface IOrderRepository : IBaseRepository<Order>
+    public interface IOrderService : IBaseService<Order>
     {
     }
 }
