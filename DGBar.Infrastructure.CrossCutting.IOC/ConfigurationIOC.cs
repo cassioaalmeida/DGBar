@@ -16,10 +16,12 @@ namespace DGBar.Infrastructure.CrossCutting.IOC
         {
             builder.RegisterType<OrderService>().As<IOrderService>();
             builder.RegisterType<ProductService>().As<IProductService>();
+            builder.RegisterType<OrderProductService>().As<IOrderProductService>();
 
 
             builder.RegisterType<OrderRepository>().As<IOrderRepository>();
             builder.RegisterType<ProductRepository>().As<IProductRepository>();
+            builder.RegisterType<OrderProductRepository>().As<IOrderProductRepository>();
 
         }
     }
