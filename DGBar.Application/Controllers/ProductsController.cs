@@ -10,6 +10,7 @@ using DGBar.Domain.Interfaces.Services;
 
 namespace DGBar.Application.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -73,7 +74,7 @@ namespace DGBar.Application.Controllers
 
         // POST: api/Products
         [HttpPost]
-        public ActionResult<Product> PostProduct(Product product)
+        public ActionResult<Product> PostProduct([FromBody] Product product)
         {
             _ProductService.Add(product);
 

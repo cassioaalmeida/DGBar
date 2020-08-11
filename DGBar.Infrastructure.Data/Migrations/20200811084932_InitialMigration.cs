@@ -61,6 +61,11 @@ namespace DGBar.Infrastructure.Data.Migrations
                 name: "IX_OrderProduct_ProductID",
                 table: "OrderProduct",
                 column: "ProductID");
+
+            migrationBuilder.InsertData("Products", columns: new[] { "Name", "Price" }, values: new object[] { "Cerveja", 5 });
+            migrationBuilder.InsertData("Products", columns: new[] { "Name", "Price" }, values: new object[] { "Conhaque", 20 });
+            migrationBuilder.InsertData("Products", columns: new[] { "Name", "Price" }, values: new object[] { "Suco", 50 });
+            migrationBuilder.InsertData("Products", columns: new[] { "Name", "Price" }, values: new object[] { "Agua", 70 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
