@@ -38,6 +38,8 @@ namespace DGBar.Application
             var connection = Configuration["SqliteConnection:SqliteConnectionString"];
             services.AddDbContext<Context>(options =>
                 options.UseSqlite(connection)
+                .EnableSensitiveDataLogging()
+                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
             );
 
             services.AddControllers();

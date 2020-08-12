@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DGBar.Domain.DTO;
 using DGBar.Domain.Entities;
 using DGBar.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Http;
@@ -30,38 +31,48 @@ namespace DGBar.Application.Controllers
         }
         // GET: api/Requests
         [HttpGet]
-        public ActionResult<IEnumerable<OrderProduct>> GetRequests()
+        public ActionResult<IEnumerable<OrderProductDTO>> GetRequests()
         {
-            return _OrderProductService.GetAll().ToList();
+            return _OrderProductService.GetAllWithChilds().ToList();
+        }
+
+        // GET: api/Requests/5
+        [HttpGet("{id}")]
+        public ActionResult<IEnumerable<OrderProductDTO>> GetRequests(int id)
+        {
+            return _OrderProductService.GetAllWithChildsByOrderId(id).ToList();
         }
         // POST: api/Requests
         [HttpPost]
-        public ActionResult<OrderProduct> RequestProductForOrder(int orderId, int productId)
+        public ActionResult<OrderProductDTO> RequestProductForOrder(int orderId, int productId)
         {
-            Order order = _OrderService.GetById(orderId);
+            OrderDTO order = _OrderService.GetById(orderId);
 
-            if (order != null && order.Status == Domain.Enums.OrderStatus.Closed)
+            if (order != null && order.Status == "Closed")
                 return StatusCode(409, new { message = "Comanda já está fechada, não é possivel adicionar itens" });
 
-            Product product = _ProductService.GetById(productId);
+            ProductDTO product = _ProductService.GetById(productId);
 
             if (order == null || product == null)
                 return NotFound();
 
-            string error = _OrderProductService.CheckJuiceLimit(orderId);
+            if (productId == 3)
+            {
+                string error = _OrderProductService.CheckJuiceLimit(orderId);
 
-            if (error != null)
-                return StatusCode(409, new { message = error });
+                if (error != null)
+                    return StatusCode(409, new { message = error });
+            }
 
-            OrderProduct request = _OrderProductService.GetOrderProductByOrderIDAndProductId(orderId, productId);
+            OrderProductDTO request = _OrderProductService.GetOrderProductByOrderIDAndProductId(orderId, productId);
 
             if(request == null)
             {
-                request = new OrderProduct();
+                request = new OrderProductDTO();
 
-                request.Order = order;
+                //request.Order = order;
                 request.OrderID = orderId;
-                request.Product = product;
+                //request.Product = product;
                 request.ProductID = productId;
                 request.Quantity = 1;
 
@@ -78,16 +89,17 @@ namespace DGBar.Application.Controllers
         }
 
         [HttpDelete]
-        public ActionResult<OrderProduct> ResetRequest(int orderId)
+        public ActionResult<OrderProductDTO> ResetRequest(int orderId)
         {
-            Order order = _OrderService.GetById(orderId);
-            if (order != null && order.Status == Domain.Enums.OrderStatus.Closed)
+            OrderDTO order = _OrderService.GetById(orderId);
+            if (order != null && order.Status == "Closed")
                 return StatusCode(409, new { message = "Comanda já está fechada, não é possivel resetar" });
 
-            List<OrderProduct> requests = _OrderProductService.GetOrderProductByOrderId(orderId).ToList();
+            List<OrderProductDTO> requests = _OrderProductService.GetOrderProductByOrderId(orderId).ToList();
 
-            foreach (OrderProduct item in requests)
+            foreach (OrderProductDTO item in requests)
             {
+                item.Order = null;
                 _OrderProductService.Delete(item);
             }
 

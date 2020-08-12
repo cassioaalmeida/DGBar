@@ -13,6 +13,8 @@ namespace DGBar.Infrastructure.CrossCutting.Adapter.Map
 
         public Order MapperToEntity(OrderDTO orderDTO)
         {
+            if (orderDTO == null)
+                return null;
             Order order = new Order
             {
                 Id = orderDTO.Id,
@@ -24,6 +26,8 @@ namespace DGBar.Infrastructure.CrossCutting.Adapter.Map
 
         public OrderDTO MapperToDTO(Order order)
         {
+            if (order == null)
+                return null;
             OrderDTO orderDTO = new OrderDTO
             {
                 Id = order.Id,

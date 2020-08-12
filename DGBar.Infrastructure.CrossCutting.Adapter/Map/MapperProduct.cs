@@ -13,6 +13,8 @@ namespace DGBar.Infrastructure.CrossCutting.Adapter.Map
 
         public Product MapperToEntity(ProductDTO productDTO)
         {
+            if (productDTO == null)
+                return null;
             Product product = new Product
             {
                 Id = productDTO.Id,
@@ -25,6 +27,8 @@ namespace DGBar.Infrastructure.CrossCutting.Adapter.Map
 
         public ProductDTO MapperToDTO(Product product)
         {
+            if (product == null)
+                return null;
             ProductDTO productDTO = new ProductDTO
             {
                 Id = product.Id,

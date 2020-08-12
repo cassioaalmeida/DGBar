@@ -1,6 +1,8 @@
-﻿using DGBar.Domain.Entities;
+﻿using DGBar.Domain.DTO;
+using DGBar.Domain.Entities;
 using DGBar.Domain.Interfaces;
 using DGBar.Domain.Interfaces.Services;
+using DGBar.Infrastructure.CrossCutting.Adapter.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,35 +12,40 @@ namespace DGBar.Service.Services
     public class OrderService : IOrderService
     {
         private readonly IOrderRepository _orderRepository;
+        private readonly IMapperOrder _mapperOrder;
 
-        public OrderService(IOrderRepository OrderRepository)
+        public OrderService(IOrderRepository OrderRepository,
+                            IMapperOrder MapperOrder)
         {
             _orderRepository = OrderRepository;
+            _mapperOrder = MapperOrder;
         }
 
-        public void Add(Order obj)
+        public void Add(OrderDTO obj)
         {
-            _orderRepository.Add(obj);
+            var objOrder = _mapperOrder.MapperToEntity(obj);
+            _orderRepository.Add(objOrder);
+            obj.Id = objOrder.Id;
         }
     
-        public IEnumerable<Order> GetAll()
+        public IEnumerable<OrderDTO> GetAll()
         {
-            return _orderRepository.GetAll();
+            return _mapperOrder.MapperListOrders(_orderRepository.GetAll());
         }
 
-        public Order GetById(int id)
+        public OrderDTO GetById(int id)
         {
-            return _orderRepository.GetById(id);
+            return _mapperOrder.MapperToDTO(_orderRepository.GetById(id));
         }
 
-        public void Delete(Order obj)
+        public void Delete(OrderDTO obj)
         {
-            _orderRepository.Delete(obj);
+            _orderRepository.Delete(_mapperOrder.MapperToEntity(obj));
         }
 
-        public void Edit(Order obj)
+        public void Edit(OrderDTO obj)
         {
-            _orderRepository.Edit(obj);
+            _orderRepository.Edit(_mapperOrder.MapperToEntity(obj));
         }
     }
 }

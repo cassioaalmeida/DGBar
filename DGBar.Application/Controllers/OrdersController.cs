@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using DGBar.Domain.Entities;
 using DGBar.Domain.Interfaces.Services;
 using DGBar.Domain.Enums;
+using DGBar.Domain.DTO;
 
 namespace DGBar.Application.Controllers
 {
@@ -25,16 +26,16 @@ namespace DGBar.Application.Controllers
 
         // GET: api/Orders
         [HttpGet]
-        public ActionResult<IEnumerable<Order>> GetOrders()
+        public ActionResult<IEnumerable<OrderDTO>> GetOrders()
         {
             return _Orderservice.GetAll().ToList();
         }
 
         // GET: api/Orders/5
         [HttpGet("{id}")]
-        public ActionResult<Order> GetOrder(int id)
+        public ActionResult<OrderDTO> GetOrder(int id)
         {
-            Order order = _Orderservice.GetById(id);
+            OrderDTO order = _Orderservice.GetById(id);
 
             if (order == null)
             {
@@ -46,7 +47,7 @@ namespace DGBar.Application.Controllers
 
         // PUT: api/Orders/5
         [HttpPut("{id}")]
-        public IActionResult PutOrder(int id, Order order)
+        public IActionResult PutOrder(int id, OrderDTO order)
         {
             if (id != order.Id)
             {
@@ -75,9 +76,10 @@ namespace DGBar.Application.Controllers
 
         // POST: api/Orders
         [HttpPost]
-        public ActionResult<Product> PostProduct([FromBody] Order order)
+        public ActionResult<OrderDTO> PostOrder([FromBody] OrderDTO orderDTO)
         {
-            order.Status = OrderStatus.Open;
+            OrderDTO order = new OrderDTO();
+            order.Status = "Open";
             _Orderservice.Add(order);
 
             return CreatedAtAction("GetOrder", new { id = order.Id }, order);

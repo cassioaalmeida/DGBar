@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DGBar.Domain\DGBar.Domain.csproj" />
+    <ProjectReference Include="..\DGBar.Infrastructure.CrossCutting.Adapter\DGBar.Infrastructure.CrossCutting.Adapter.csproj" />
     <ProjectReference Include="..\DGBar.Infrastructure.Data\DGBar.Infrastructure.Data.csproj" />
   </ItemGroup>
 

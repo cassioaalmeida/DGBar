@@ -9,5 +9,7 @@ namespace DGBar.Domain.Interfaces
     {
         OrderProduct GetOrderProductByOrderIDAndProductId(int order_id, int product_id);
         IEnumerable<OrderProduct> GetOrderProductByOrderId(int order_id);
+        IEnumerable<OrderProduct> GetAllWithChilds();
+        IEnumerable<OrderProduct> GetAllWithChildsByOrderId(int order_id);
     }
 }

@@ -10,17 +10,20 @@ namespace DGBar.Infrastructure.CrossCutting.Adapter.Map
 {
     public class MapperOrderProduct : IMapperOrderProduct
     {
-        public MapperOrder MapperOrder { get; set; }
-        public MapperProduct MapperProduct { get; set; }
+        public MapperOrder MapperOrder = new MapperOrder();
+        public MapperProduct MapperProduct = new MapperProduct();
 
         public OrderProduct MapperToEntity(OrderProductDTO orderProductDTO)
         {
+            if (orderProductDTO == null)
+                return null;
             OrderProduct orderProduct = new OrderProduct
             {
                 OrderID = orderProductDTO.OrderID,
                 ProductID = orderProductDTO.ProductID,
                 Order = MapperOrder.MapperToEntity(orderProductDTO.Order),
-                Product = MapperProduct.MapperToEntity(orderProductDTO.Product)
+                Product = MapperProduct.MapperToEntity(orderProductDTO.Product),
+                Quantity = orderProductDTO.Quantity
             };
 
             return orderProduct;
@@ -28,12 +31,15 @@ namespace DGBar.Infrastructure.CrossCutting.Adapter.Map
 
         public OrderProductDTO MapperToDTO(OrderProduct orderProduct)
         {
+            if (orderProduct == null)
+                return null;
             OrderProductDTO orderProductDTO = new OrderProductDTO
             {
                 OrderID = orderProduct.OrderID,
                 ProductID = orderProduct.ProductID,
                 Order = MapperOrder.MapperToDTO(orderProduct.Order),
-                Product = MapperProduct.MapperToDTO(orderProduct.Product)
+                Product = MapperProduct.MapperToDTO(orderProduct.Product),
+                Quantity = orderProduct.Quantity
             };
 
             return orderProductDTO;
@@ -44,12 +50,15 @@ namespace DGBar.Infrastructure.CrossCutting.Adapter.Map
 
             foreach (OrderProduct item in orderProducts)
             {
+                OrderDTO order = MapperOrder.MapperToDTO(item.Order);
+                ProductDTO product = MapperProduct.MapperToDTO(item.Product);
                 OrderProductDTO orderProductDTO = new OrderProductDTO
                 {
                     OrderID = item.OrderID,
                     ProductID = item.ProductID,
-                    Order = MapperOrder.MapperToDTO(item.Order),
-                    Product = MapperProduct.MapperToDTO(item.Product)
+                    Order = order,
+                    Product = product,
+                    Quantity = item.Quantity
                 };
 
                 orderProductDTOs.Add(orderProductDTO);

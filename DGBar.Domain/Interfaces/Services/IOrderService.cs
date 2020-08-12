@@ -1,4 +1,5 @@
-﻿using DGBar.Domain.Entities;
+﻿using DGBar.Domain.DTO;
+using DGBar.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,14 +8,14 @@ namespace DGBar.Domain.Interfaces.Services
 {
     public interface IOrderService
     {
-        void Add(Order obj);
+        void Add(OrderDTO obj);
 
-        Order GetById(int id);
+        OrderDTO GetById(int id);
 
-        IEnumerable<Order> GetAll();
+        IEnumerable<OrderDTO> GetAll();
 
-        void Edit(Order obj);
+        void Edit(OrderDTO obj);
 
-        void Delete(Order obj);
+        void Delete(OrderDTO obj);
     }
 }

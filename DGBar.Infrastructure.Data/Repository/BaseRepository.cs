@@ -18,7 +18,6 @@ namespace DGBar.Infrastructure.Data.Repository
         {
             _context = Context;
         }
-
         public IEnumerable<T> GetAll()
         {
             return _context.Set<T>().ToList();
@@ -43,6 +42,7 @@ namespace DGBar.Infrastructure.Data.Repository
 
         public void Delete(T entity)
         {
+            _context.Entry<T>(entity).State = EntityState.Detached;
             _context.Set<T>().Attach(entity);
             _context.Set<T>().Remove(entity);
             _context.SaveChanges();

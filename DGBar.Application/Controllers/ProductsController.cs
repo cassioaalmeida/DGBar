@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DGBar.Domain.Entities;
 using DGBar.Domain.Interfaces.Services;
+using DGBar.Domain.DTO;
 
 namespace DGBar.Application.Controllers
 {
@@ -24,16 +25,16 @@ namespace DGBar.Application.Controllers
 
         // GET: api/Products
         [HttpGet]
-        public ActionResult<IEnumerable<Product>> GetProducts()
+        public ActionResult<IEnumerable<ProductDTO>> GetProducts()
         {
             return _ProductService.GetAll().ToList();
         }
 
         // GET: api/Products/5
         [HttpGet("{id}")]
-        public ActionResult<Product> GetProduct(int id)
+        public ActionResult<ProductDTO> GetProduct(int id)
         {
-            Product product = _ProductService.GetById(id);
+            ProductDTO product = _ProductService.GetById(id);
 
             if (product == null)
             {
@@ -45,7 +46,7 @@ namespace DGBar.Application.Controllers
 
         // POST: api/Products
         [HttpPost]
-        public ActionResult<Product> PostProduct([FromBody] Product product)
+        public ActionResult<ProductDTO> PostProduct([FromBody] ProductDTO product)
         {
             _ProductService.Add(product);
 
