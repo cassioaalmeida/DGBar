@@ -3,6 +3,7 @@ using DGBar.Domain.Interfaces;
 using DGBar.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DGBar.Service.Services
@@ -40,5 +41,26 @@ namespace DGBar.Service.Services
         {
             _orderRepository.Edit(obj);
         }
+        public OrderProduct GetOrderProductByOrderIDAndProductId(int order_id, int product_id)
+        {
+            return _orderRepository.GetOrderProductByOrderIDAndProductId(order_id, product_id);
+        }
+        public IEnumerable<OrderProduct> GetOrderProductByOrderId(int order_id)
+        {
+            return _orderRepository.GetOrderProductByOrderId(order_id);
+        }
+
+        public string CheckJuiceLimit(int order_id)
+        {
+            //Só é permitido 3 sucos por comanda, ID do suco = 3;
+            OrderProduct request = _orderRepository.GetOrderProductByOrderIDAndProductId(order_id, 3);
+
+            if (request != null && request.Quantity + 1 > 3)
+                return ("Só é permitido 3 sucos por comanda.");
+
+            return null;
+        }
+
+
     }
 }
