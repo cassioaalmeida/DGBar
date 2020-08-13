@@ -25,9 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Infrastructure.Data",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Infrastructure.CrossCutting.IOC", "DGBar.Infrastructure.CrossCutting.IOC\DGBar.Infrastructure.CrossCutting.IOC.csproj", "{09B85DB5-8DD8-4A70-BBC3-B010C29C2A8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGBar.Domain.DTO", "DGBar.Domain.DTO\DGBar.Domain.DTO.csproj", "{B4E80F99-6C1B-43D7-BCF7-2C23D239E39A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Domain.DTO", "DGBar.Domain.DTO\DGBar.Domain.DTO.csproj", "{B4E80F99-6C1B-43D7-BCF7-2C23D239E39A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGBar.Infrastructure.CrossCutting.Adapter", "DGBar.Infrastructure.CrossCutting.Adapter\DGBar.Infrastructure.CrossCutting.Adapter.csproj", "{F3E5F294-FDB9-4A50-9D04-69126553E52F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Infrastructure.CrossCutting.Adapter", "DGBar.Infrastructure.CrossCutting.Adapter\DGBar.Infrastructure.CrossCutting.Adapter.csproj", "{F3E5F294-FDB9-4A50-9D04-69126553E52F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
