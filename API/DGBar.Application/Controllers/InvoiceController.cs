@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DGBar.Application.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class InvoiceController : ControllerBase
     {

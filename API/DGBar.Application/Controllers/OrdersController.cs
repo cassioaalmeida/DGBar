@@ -13,7 +13,7 @@ using DGBar.Domain.DTO;
 namespace DGBar.Application.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
     {

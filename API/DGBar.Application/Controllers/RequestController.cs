@@ -13,7 +13,7 @@ using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 namespace DGBar.Application.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class RequestController : ControllerBase
     {
@@ -44,8 +44,11 @@ namespace DGBar.Application.Controllers
         }
         // POST: api/Requests
         [HttpPost]
-        public ActionResult<OrderProductDTO> RequestProductForOrder(int orderId, int productId)
+        public ActionResult<OrderProductDTO> RequestProductForOrder(RequestParms req)
         {
+            int orderId = req.OrderId;
+            int productId = req.ProductId;
+
             OrderDTO order = null;
 
             ErrorDTO error = _OrderService.CheckOrderStatus(orderId,ref order);
@@ -107,5 +110,11 @@ namespace DGBar.Application.Controllers
 
             return Ok();
         }
+    }
+
+    public class RequestParms
+    {
+        public int OrderId { get; set; }
+        public int ProductId { get; set; }
     }
 }
