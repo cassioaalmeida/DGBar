@@ -46,10 +46,12 @@ namespace DGBar.Application.Controllers
         [HttpPost]
         public ActionResult<OrderProductDTO> RequestProductForOrder(int orderId, int productId)
         {
-            OrderDTO order = _OrderService.GetById(orderId);
+            OrderDTO order = null;
 
-            if (order != null && order.Status == "Closed")
-                return StatusCode(409, new { message = "Comanda já está fechada, não é possivel adicionar itens" });
+            ErrorDTO error = _OrderService.CheckOrderStatus(orderId,ref order);
+
+            if (error != null)
+                return StatusCode(error.Code, error.Message);
 
             ProductDTO product = _ProductService.GetById(productId);
 
@@ -58,10 +60,10 @@ namespace DGBar.Application.Controllers
 
             if (productId == 3)
             {
-                string error = _OrderProductService.CheckJuiceLimit(orderId);
+                error = _OrderProductService.CheckJuiceLimit(orderId);
 
                 if (error != null)
-                    return StatusCode(409, new { message = error });
+                    return StatusCode(error.Code, error.Message);
             }
 
             OrderProductDTO request = _OrderProductService.GetOrderProductByOrderIDAndProductId(orderId, productId);

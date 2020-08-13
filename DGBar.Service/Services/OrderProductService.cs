@@ -64,13 +64,13 @@ namespace DGBar.Service.Services
             return _mapperOrder.MapperListOrderProducts(_orderRepository.GetOrderProductByOrderId(order_id));
         }
 
-        public string CheckJuiceLimit(int order_id)
+        public ErrorDTO CheckJuiceLimit(int order_id)
         {
             //Só é permitido 3 sucos por comanda, ID do suco = 3;
             OrderProductDTO request = _mapperOrder.MapperToDTO(_orderRepository.GetOrderProductByOrderIDAndProductId(order_id, 3));
 
             if (request != null && request.Quantity + 1 > 3)
-                return ("Só é permitido 3 sucos por comanda.");
+                return (new ErrorDTO { Code = 409, Message = "Só é permitido 3 sucos por comanda." });
 
             return null;
         }

@@ -47,5 +47,14 @@ namespace DGBar.Service.Services
         {
             _orderRepository.Edit(_mapperOrder.MapperToEntity(obj));
         }
+
+        public ErrorDTO CheckOrderStatus(int order_id, ref OrderDTO order)
+        {
+            order = GetById(order_id);
+
+            if (order != null && order.Status == "Closed")
+                return (new ErrorDTO { Code = 409, Message = "Comanda já está fechada, não é possivel adicionar itens" });
+            return null;
+        }
     }
 }

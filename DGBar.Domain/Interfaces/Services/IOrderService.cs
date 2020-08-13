@@ -17,5 +17,8 @@ namespace DGBar.Domain.Interfaces.Services
         void Edit(OrderDTO obj);
 
         void Delete(OrderDTO obj);
+
+        ErrorDTO CheckOrderStatus(int order_id, ref OrderDTO order);
+
     }
 }
