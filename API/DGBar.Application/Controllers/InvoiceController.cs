@@ -26,12 +26,12 @@ namespace DGBar.Application.Controllers
             _ProductService = ProductService;
         }
 
-        [HttpPost]
-        public ActionResult<OrderProductDTO> GenerateInvoice(int orderId)
+        [HttpPost("{id}")]
+        public ActionResult<OrderProductDTO> GenerateInvoice(int id)
         {
             OrderDTO order = null;
 
-            ErrorDTO error = _OrderService.CheckOrderStatus(orderId, ref order);
+            ErrorDTO error = _OrderService.CheckOrderStatus(id, ref order);
 
             if (error != null)
                 return StatusCode(error.Code, error.Message);
@@ -44,6 +44,17 @@ namespace DGBar.Application.Controllers
 
             _OrderService.Edit(order);
 
+
+            return Ok(invoice);
+        }
+        [HttpGet("{id}")]
+        public ActionResult<OrderProductDTO> PreviewInvoice(int id)
+        {
+            OrderDTO order = _OrderService.GetById(id);
+
+            InvoiceDTO invoice = CreateInvoiceObject(order);
+
+            CalculateInvoicePrice(invoice);
 
             return Ok(invoice);
         }
