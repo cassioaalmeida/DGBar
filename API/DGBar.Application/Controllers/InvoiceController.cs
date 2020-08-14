@@ -47,10 +47,10 @@ namespace DGBar.Application.Controllers
 
             return Ok(invoice);
         }
-        [HttpGet("{id}")]
-        public ActionResult<OrderProductDTO> PreviewInvoice(int id)
+        [HttpGet]
+        public ActionResult<OrderProductDTO> PreviewInvoice(int orderId)
         {
-            OrderDTO order = _OrderService.GetById(id);
+            OrderDTO order = _OrderService.GetById(orderId);
 
             InvoiceDTO invoice = CreateInvoiceObject(order);
 
