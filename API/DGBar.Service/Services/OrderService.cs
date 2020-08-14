@@ -53,7 +53,7 @@ namespace DGBar.Service.Services
             order = GetById(order_id);
 
             if (order != null && order.Status == "Closed")
-                return (new ErrorDTO { Code = 409, Message = "Comanda já está fechada, não é possivel adicionar itens" });
+                return (new ErrorDTO { Code = 409, Message = "Comanda já está fechada, não é possivel realizar alteração" });
             return null;
         }
     }

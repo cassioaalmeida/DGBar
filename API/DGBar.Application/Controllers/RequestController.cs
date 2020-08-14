@@ -58,8 +58,10 @@ namespace DGBar.Application.Controllers
 
             ProductDTO product = _ProductService.GetById(productId);
 
-            if (order == null || product == null)
-                return NotFound();
+            if (order == null)
+                return StatusCode(404, "Ordem não encontrada");
+            if (product == null)
+                return StatusCode(404, "Produto não encontrado");
 
             if (productId == 3)
             {
@@ -94,13 +96,13 @@ namespace DGBar.Application.Controllers
         }
 
         [HttpDelete]
-        public ActionResult<OrderProductDTO> ResetRequest(int orderId)
+        public ActionResult<OrderProductDTO> ResetRequest(InvoiceParm invoice)
         {
-            OrderDTO order = _OrderService.GetById(orderId);
+            OrderDTO order = _OrderService.GetById(invoice.orderId);
             if (order != null && order.Status == "Closed")
                 return StatusCode(409, new { message = "Comanda já está fechada, não é possivel resetar" });
 
-            List<OrderProductDTO> requests = _OrderProductService.GetOrderProductByOrderId(orderId).ToList();
+            List<OrderProductDTO> requests = _OrderProductService.GetOrderProductByOrderId(invoice.orderId).ToList();
 
             foreach (OrderProductDTO item in requests)
             {

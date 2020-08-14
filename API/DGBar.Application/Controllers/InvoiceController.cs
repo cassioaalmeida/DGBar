@@ -26,12 +26,12 @@ namespace DGBar.Application.Controllers
             _ProductService = ProductService;
         }
 
-        [HttpPost("{id}")]
-        public ActionResult<OrderProductDTO> GenerateInvoice(int id)
+        [HttpPost]
+        public ActionResult<OrderProductDTO> GenerateInvoice(InvoiceParm invoiceParm)
         {
             OrderDTO order = null;
 
-            ErrorDTO error = _OrderService.CheckOrderStatus(id, ref order);
+            ErrorDTO error = _OrderService.CheckOrderStatus(invoiceParm.orderId, ref order);
 
             if (error != null)
                 return StatusCode(error.Code, error.Message);
@@ -125,23 +125,31 @@ namespace DGBar.Application.Controllers
             InvoiceDTO invoice = new InvoiceDTO();
             invoice.Products = new List<InvoiceProductDTO>();
 
-            invoice.OrderId = (int)order.Id;
-
-            List<OrderProductDTO> requests = _OrderProductService.GetAllWithChildsByOrderId(invoice.OrderId).ToList();
-
-            foreach (OrderProductDTO item in requests)
+            if (order != null)
             {
-                InvoiceProductDTO product = new InvoiceProductDTO();
+                invoice.OrderId = (int)order.Id;
 
-                product.ProductId = item.ProductID;
-                product.Name = item.Product.Name;
-                product.Price = item.Product.Price;
-                product.Quantity = item.Quantity;
+                List<OrderProductDTO> requests = _OrderProductService.GetAllWithChildsByOrderId(invoice.OrderId).ToList();
 
-                invoice.Products.Add(product);
+                foreach (OrderProductDTO item in requests)
+                {
+                    InvoiceProductDTO product = new InvoiceProductDTO();
+
+                    product.ProductId = item.ProductID;
+                    product.Name = item.Product.Name;
+                    product.Price = item.Product.Price;
+                    product.Quantity = item.Quantity;
+
+                    invoice.Products.Add(product);
+                }
             }
 
             return invoice;
         }
+    }
+
+    public class InvoiceParm
+    {
+        public int orderId { get; set; }
     }
 }

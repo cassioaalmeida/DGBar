@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent } from 'react';
 
 import './styles.css';
 import { Button, Grid, Typography } from '@material-ui/core';
@@ -20,9 +20,6 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, order }) => {
     var orderId = order;
     var productId = parseInt(product.id);
 
-    console.log(orderId);
-    console.log(productId);
-
     api
       .post('Request', {
         orderId,
@@ -33,11 +30,10 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, order }) => {
       })
       .catch(function (error) {
         if (error.response) {
-          console.log(error.response.data);
           alert(error.response.data);
-        } else {
+        } else if (error.message) {
           alert(error.message);
-        }
+        } else alert(error);
       });
   }
 

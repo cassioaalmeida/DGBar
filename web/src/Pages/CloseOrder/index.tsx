@@ -4,22 +4,25 @@ import { Button, TextField } from '@material-ui/core';
 
 import './styles.css';
 import api from '../../Service/api';
+import InvoiceItem, { Invoice } from '../InvoiceItem';
 
 function CloseOrder() {
   const [invoice, setInvoice] = useState([]);
   const [order, setOrder] = useState([]);
+  var response;
+  var click = false;
 
   async function loadInvoice(e: FormEvent) {
     e.preventDefault();
     var orderId = order;
 
-    const response = await api.get('Invoice', {
+    response = await api.get('Invoice', {
       params: {
         orderId,
       },
     });
-
-    console.log(response.data);
+    click = true;
+    console.log(click);
 
     setInvoice(response.data);
   }
@@ -39,6 +42,9 @@ function CloseOrder() {
             Visualizar NF
           </Button>
         </form>
+      </div>
+      <div>
+        <InvoiceItem invoice={(invoice as unknown) as Invoice} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { FormEvent, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Grid, TextField } from '@material-ui/core';
 import PageHeader from '../PageHeader';
 import ProductItem, { Product } from '../ProductItem';
@@ -16,7 +16,6 @@ function ProductList() {
 
   async function searchProducts() {
     const response = await api.get('Products');
-    console.log(response.data);
     setProducts(response.data);
   }
 

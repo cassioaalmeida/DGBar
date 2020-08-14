@@ -2,7 +2,6 @@ import React from 'react';
 import {
   AppBar,
   Toolbar,
-  IconButton,
   Typography,
   MenuItem,
   Button,
@@ -11,7 +10,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 
 import './styles.css';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function PageHeader() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
