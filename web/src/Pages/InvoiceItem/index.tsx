@@ -68,7 +68,6 @@ const InvoiceItem: React.FC<InvoiceProps> = ({ invoice }) => {
         alert('Comanda resetada com sucesso');
       })
       .catch(function (error) {
-        console.log(error);
         if (error.response) {
           alert(error.response.data);
         } else if (error.message) {

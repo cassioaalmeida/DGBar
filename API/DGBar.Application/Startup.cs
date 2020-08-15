@@ -20,6 +20,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using AspNetCoreRateLimit;
+using Microsoft.AspNetCore.Http;
 
 namespace DGBar.Application
 {
@@ -54,6 +56,17 @@ namespace DGBar.Application
                 .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)
             );
 
+            // Ip Rate Limit
+            services.AddOptions();
+            services.AddMemoryCache();
+            services.Configure<IpRateLimitOptions>(Configuration.GetSection("IpRateLimiting"));
+            services.Configure<IpRateLimitPolicies>(Configuration.GetSection("IpRateLimitPolicies"));
+            services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
+            services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
+
+
             services.AddControllers().AddNewtonsoftJson();
 
             services.AddSwaggerGen(c =>
@@ -62,6 +75,8 @@ namespace DGBar.Application
             });
 
             services.AddSwaggerGenNewtonsoftSupport();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

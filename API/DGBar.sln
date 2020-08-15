@@ -29,6 +29,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Domain.DTO", "DGBar.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DGBar.Infrastructure.CrossCutting.Adapter", "DGBar.Infrastructure.CrossCutting.Adapter\DGBar.Infrastructure.CrossCutting.Adapter.csproj", "{F3E5F294-FDB9-4A50-9D04-69126553E52F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{5B90AA5D-14A3-4BF2-90CA-9AABA43AAD5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DGBar.Tests", "DGBar.Tests\DGBar.Tests.csproj", "{C636DA27-9AE3-4EF0-8FF0-89F521BADAE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,10 @@ Global
 		{F3E5F294-FDB9-4A50-9D04-69126553E52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3E5F294-FDB9-4A50-9D04-69126553E52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3E5F294-FDB9-4A50-9D04-69126553E52F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C636DA27-9AE3-4EF0-8FF0-89F521BADAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C636DA27-9AE3-4EF0-8FF0-89F521BADAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C636DA27-9AE3-4EF0-8FF0-89F521BADAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C636DA27-9AE3-4EF0-8FF0-89F521BADAE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +85,7 @@ Global
 		{09B85DB5-8DD8-4A70-BBC3-B010C29C2A8C} = {03977C0F-1BEB-4515-BFC1-972BEC59455E}
 		{B4E80F99-6C1B-43D7-BCF7-2C23D239E39A} = {24D663DE-D651-44C9-B101-E4813AE4DA31}
 		{F3E5F294-FDB9-4A50-9D04-69126553E52F} = {03977C0F-1BEB-4515-BFC1-972BEC59455E}
+		{C636DA27-9AE3-4EF0-8FF0-89F521BADAE4} = {5B90AA5D-14A3-4BF2-90CA-9AABA43AAD5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A1ED296-AE33-4200-951D-D35AC89DB793}
