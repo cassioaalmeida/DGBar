@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="4d19ed1e-fcd1-41de-8935-601cdfd56546" name="NoteFamilia@DESKTOP-NFMJNKP 2020-08-15 11:32:31" runUser="DESKTOP-NFMJNKP\NoteFamilia" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2020-08-15T11:32:31.5515836-03:00" queuing="2020-08-15T11:32:31.5515855-03:00" start="2020-08-15T11:32:28.7658009-03:00" finish="2020-08-15T11:32:31.5678571-03:00" />
+  <TestSettings name="default" id="62285d62-2307-49b3-a160-40ffc6a8d2ca">
+    <Deployment runDeploymentRoot="NoteFamilia_DESKTOP-NFMJNKP_2020-08-15_11_32_31" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="5fbb924b-29b6-4dbc-b364-e83ed5f9a5b0" testId="dd4261da-35a5-9c59-9cb2-99c885112e2f" testName="DGBar.Tests.Tests.TestProduct.CreateProducts" computerName="DESKTOP-NFMJNKP" duration="00:00:00.0191549" startTime="2020-08-15T11:32:31.3964344-03:00" endTime="2020-08-15T11:32:31.3964366-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5fbb924b-29b6-4dbc-b364-e83ed5f9a5b0" />
+    <UnitTestResult executionId="56fcac53-8f50-4663-a28d-c0f0c93926d2" testId="fc05e5c7-e169-4855-27cb-21f34f6cf6a0" testName="DGBar.Tests.Tests.TestProduct.GetProducts" computerName="DESKTOP-NFMJNKP" duration="00:00:00.6950282" startTime="2020-08-15T11:32:31.3776797-03:00" endTime="2020-08-15T11:32:31.3777368-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="56fcac53-8f50-4663-a28d-c0f0c93926d2" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="DGBar.Tests.Tests.TestProduct.GetProducts" storage="c:\users\notefamilia\documents\git\dgbar\api\dgbar.tests\bin\debug\netcoreapp3.1\dgbar.tests.dll" id="fc05e5c7-e169-4855-27cb-21f34f6cf6a0">
+      <Execution id="56fcac53-8f50-4663-a28d-c0f0c93926d2" />
+      <TestMethod codeBase="C:\Users\NoteFamilia\Documents\git\DGBar\API\DGBar.Tests\bin\Debug\netcoreapp3.1\DGBar.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DGBar.Tests.Tests.TestProduct" name="GetProducts" />
+    </UnitTest>
+    <UnitTest name="DGBar.Tests.Tests.TestProduct.CreateProducts" storage="c:\users\notefamilia\documents\git\dgbar\api\dgbar.tests\bin\debug\netcoreapp3.1\dgbar.tests.dll" id="dd4261da-35a5-9c59-9cb2-99c885112e2f">
+      <Execution id="5fbb924b-29b6-4dbc-b364-e83ed5f9a5b0" />
+      <TestMethod codeBase="C:\Users\NoteFamilia\Documents\git\DGBar\API\DGBar.Tests\bin\Debug\netcoreapp3.1\DGBar.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="DGBar.Tests.Tests.TestProduct" name="CreateProducts" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="dd4261da-35a5-9c59-9cb2-99c885112e2f" executionId="5fbb924b-29b6-4dbc-b364-e83ed5f9a5b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc05e5c7-e169-4855-27cb-21f34f6cf6a0" executionId="56fcac53-8f50-4663-a28d-c0f0c93926d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.0 (64-bit .NET Core 3.1.6)&#xD;
+[xUnit.net 00:00:01.12]   Discovering: DGBar.Tests&#xD;
+[xUnit.net 00:00:01.16]   Discovered:  DGBar.Tests&#xD;
+[xUnit.net 00:00:01.16]   Starting:    DGBar.Tests&#xD;
+[xUnit.net 00:00:01.96]   Finished:    DGBar.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

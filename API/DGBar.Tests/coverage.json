@@ -1,0 +1,2415 @@
+{
+  "DGBar.Application.dll": {
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Application\\Program.cs": {
+      "DGBar.Application.Program": {
+        "System.Void DGBar.Application.Program::Main(System.String[])": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.Extensions.Hosting.IHostBuilder DGBar.Application.Program::CreateHostBuilder(System.String[])": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Application\\Startup.cs": {
+      "DGBar.Application.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration DGBar.Application.Startup::get_Configuration()": {
+          "Lines": {
+            "36": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Application.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "80": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Application.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)": {
+          "Lines": {
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "90": 0,
+            "92": 0,
+            "94": 0,
+            "96": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0
+          },
+          "Branches": [
+            {
+              "Line": 85,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 85,
+              "Offset": 9,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void DGBar.Application.Startup::ConfigureContainer(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "110": 0,
+            "111": 0,
+            "112": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Application.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Application\\Controllers\\InvoiceController.cs": {
+      "DGBar.Application.Controllers.InvoiceController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Application.Controllers.InvoiceController::GenerateInvoice(DGBar.Application.Controllers.InvoiceParm)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "41": 0,
+            "43": 0,
+            "45": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 36,
+              "Offset": 29,
+              "EndOffset": 31,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 29,
+              "EndOffset": 58,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Application.Controllers.InvoiceController::PreviewInvoice(System.Int32)": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Application.Controllers.InvoiceController::CalculateInvoicePrice(DGBar.Domain.DTO.InvoiceDTO)": {
+          "Lines": {
+            "63": 0,
+            "66": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0,
+            "79": 0,
+            "81": 0,
+            "82": 0,
+            "84": 0,
+            "85": 0,
+            "87": 0,
+            "89": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": [
+            {
+              "Line": 68,
+              "Offset": 202,
+              "EndOffset": 28,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 98,
+              "EndOffset": 100,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 112,
+              "EndOffset": 114,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 126,
+              "EndOffset": 128,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 98,
+              "EndOffset": 144,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 112,
+              "EndOffset": 156,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 126,
+              "EndOffset": 168,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 140,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 140,
+              "EndOffset": 194,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 68,
+              "Offset": 202,
+              "EndOffset": 207,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Double DGBar.Application.Controllers.InvoiceController::CalculateInvoiceDiscount(System.Int32,System.Int32,System.Int32,System.Int32)": {
+          "Lines": {
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "101": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "107": 0,
+            "108": 0,
+            "110": 0,
+            "111": 0,
+            "113": 0,
+            "115": 0,
+            "116": 0,
+            "118": 0,
+            "120": 0,
+            "121": 0
+          },
+          "Branches": [
+            {
+              "Line": 101,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 25,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 104,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 104,
+              "Offset": 45,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 108,
+              "EndOffset": 110,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 110,
+              "Offset": 108,
+              "EndOffset": 114,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 115,
+              "Offset": 128,
+              "EndOffset": 130,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 115,
+              "Offset": 128,
+              "EndOffset": 140,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        },
+        "DGBar.Domain.DTO.InvoiceDTO DGBar.Application.Controllers.InvoiceController::CreateInvoiceObject(DGBar.Domain.DTO.OrderDTO)": {
+          "Lines": {
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "132": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "147": 0,
+            "148": 0
+          },
+          "Branches": [
+            {
+              "Line": 128,
+              "Offset": 25,
+              "EndOffset": 30,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 134,
+              "Offset": 195,
+              "EndOffset": 86,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 134,
+              "Offset": 195,
+              "EndOffset": 197,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 128,
+              "Offset": 25,
+              "EndOffset": 215,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void DGBar.Application.Controllers.InvoiceController::.ctor(DGBar.Domain.Interfaces.Services.IOrderProductService,DGBar.Domain.Interfaces.Services.IOrderService,DGBar.Domain.Interfaces.Services.IProductService)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "DGBar.Application.Controllers.InvoiceParm": {
+        "System.Int32 DGBar.Application.Controllers.InvoiceParm::get_orderId()": {
+          "Lines": {
+            "153": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Application\\Controllers\\OrdersController.cs": {
+      "DGBar.Application.Controllers.OrdersController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderDTO>> DGBar.Application.Controllers.OrdersController::GetOrders()": {
+          "Lines": {
+            "30": 1,
+            "31": 1,
+            "32": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<DGBar.Domain.DTO.OrderDTO> DGBar.Application.Controllers.OrdersController::GetOrder(System.Int32)": {
+          "Lines": {
+            "37": 2,
+            "38": 2,
+            "40": 2,
+            "41": 1,
+            "42": 1,
+            "45": 1,
+            "46": 2
+          },
+          "Branches": [
+            {
+              "Line": 40,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 40,
+              "Offset": 20,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult DGBar.Application.Controllers.OrdersController::PutOrder(System.Int32,DGBar.Domain.DTO.OrderDTO)": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "69": 0,
+            "70": 0,
+            "74": 0,
+            "75": 0
+          },
+          "Branches": [
+            {
+              "Line": 52,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 31,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 75,
+              "EndOffset": 77,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 75,
+              "EndOffset": 87,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<DGBar.Domain.DTO.OrderDTO> DGBar.Application.Controllers.OrdersController::PostOrder(DGBar.Domain.DTO.OrderDTO)": {
+          "Lines": {
+            "80": 4,
+            "81": 4,
+            "82": 4,
+            "83": 4,
+            "85": 4,
+            "86": 4
+          },
+          "Branches": []
+        },
+        "System.Boolean DGBar.Application.Controllers.OrdersController::OrderExists(System.Int32)": {
+          "Lines": {
+            "88": 0,
+            "89": 0,
+            "90": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Application.Controllers.OrdersController::.ctor(DGBar.Domain.Interfaces.Services.IOrderService)": {
+          "Lines": {
+            "22": 4,
+            "23": 4,
+            "24": 4,
+            "25": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Application\\Controllers\\ProductsController.cs": {
+      "DGBar.Application.Controllers.ProductsController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.ProductDTO>> DGBar.Application.Controllers.ProductsController::GetProducts()": {
+          "Lines": {
+            "29": 1,
+            "30": 1,
+            "31": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<DGBar.Domain.DTO.ProductDTO> DGBar.Application.Controllers.ProductsController::GetProduct(System.Int32)": {
+          "Lines": {
+            "36": 2,
+            "37": 2,
+            "39": 2,
+            "40": 1,
+            "41": 1,
+            "44": 1,
+            "45": 2
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 39,
+              "Offset": 20,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<DGBar.Domain.DTO.ProductDTO> DGBar.Application.Controllers.ProductsController::PostProduct(DGBar.Domain.DTO.ProductDTO)": {
+          "Lines": {
+            "50": 4,
+            "51": 4,
+            "53": 4,
+            "54": 4
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Application.Controllers.ProductsController::.ctor(DGBar.Domain.Interfaces.Services.IProductService)": {
+          "Lines": {
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "24": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Application\\Controllers\\RequestController.cs": {
+      "DGBar.Application.Controllers.RequestController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderProductDTO>> DGBar.Application.Controllers.RequestController::GetRequests()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderProductDTO>> DGBar.Application.Controllers.RequestController::GetRequests(System.Int32)": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Application.Controllers.RequestController::RequestProductForOrder(DGBar.Application.Controllers.RequestParms)": {
+          "Lines": {
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "74": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "81": 0,
+            "83": 0,
+            "84": 0,
+            "86": 0,
+            "87": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0,
+            "96": 0
+          },
+          "Branches": [
+            {
+              "Line": 56,
+              "Offset": 40,
+              "EndOffset": 42,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 40,
+              "EndOffset": 72,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 61,
+              "Offset": 94,
+              "EndOffset": 96,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 61,
+              "Offset": 94,
+              "EndOffset": 124,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 133,
+              "EndOffset": 135,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 133,
+              "EndOffset": 163,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 171,
+              "EndOffset": 173,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 70,
+              "Offset": 195,
+              "EndOffset": 197,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 70,
+              "Offset": 195,
+              "EndOffset": 227,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 171,
+              "EndOffset": 228,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 252,
+              "EndOffset": 254,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 252,
+              "EndOffset": 306,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            }
+          ]
+        },
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Application.Controllers.RequestController::ResetRequest(DGBar.Application.Controllers.InvoiceParm)": {
+          "Lines": {
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "105": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "113": 0,
+            "114": 0
+          },
+          "Branches": [
+            {
+              "Line": 102,
+              "Offset": 20,
+              "EndOffset": 22,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 102,
+              "Offset": 20,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 102,
+              "Offset": 43,
+              "EndOffset": 45,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 102,
+              "Offset": 43,
+              "EndOffset": 74,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 107,
+              "Offset": 149,
+              "EndOffset": 108,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 107,
+              "Offset": 149,
+              "EndOffset": 151,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void DGBar.Application.Controllers.RequestController::.ctor(DGBar.Domain.Interfaces.Services.IOrderProductService,DGBar.Domain.Interfaces.Services.IOrderService,DGBar.Domain.Interfaces.Services.IProductService)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        }
+      },
+      "DGBar.Application.Controllers.RequestParms": {
+        "System.Int32 DGBar.Application.Controllers.RequestParms::get_OrderId()": {
+          "Lines": {
+            "119": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 DGBar.Application.Controllers.RequestParms::get_ProductId()": {
+          "Lines": {
+            "120": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "DGBar.Domain.dll": {
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain\\Entities\\BaseEntity.cs": {
+      "DGBar.Domain.Entities.BaseEntity": {
+        "System.Nullable`1<System.Int32> DGBar.Domain.Entities.BaseEntity::get_Id()": {
+          "Lines": {
+            "9": 22
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain\\Entities\\Order.cs": {
+      "DGBar.Domain.Entities.Order": {
+        "DGBar.Domain.Enums.OrderStatus DGBar.Domain.Entities.Order::get_Status()": {
+          "Lines": {
+            "11": 8
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<DGBar.Domain.Entities.OrderProduct> DGBar.Domain.Entities.Order::get_OrderProducts()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain\\Entities\\OrderProduct.cs": {
+      "DGBar.Domain.Entities.OrderProduct": {
+        "System.Int32 DGBar.Domain.Entities.OrderProduct::get_OrderID()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.Entities.Order DGBar.Domain.Entities.OrderProduct::get_Order()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 DGBar.Domain.Entities.OrderProduct::get_ProductID()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.Entities.Product DGBar.Domain.Entities.OrderProduct::get_Product()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 DGBar.Domain.Entities.OrderProduct::get_Quantity()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain\\Entities\\Product.cs": {
+      "DGBar.Domain.Entities.Product": {
+        "System.String DGBar.Domain.Entities.Product::get_Name()": {
+          "Lines": {
+            "10": 6
+          },
+          "Branches": []
+        },
+        "System.Double DGBar.Domain.Entities.Product::get_Price()": {
+          "Lines": {
+            "11": 6
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<DGBar.Domain.Entities.OrderProduct> DGBar.Domain.Entities.Product::get_OrderProducts()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "DGBar.Domain.DTO.dll": {
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain.DTO\\ErrorDTO.cs": {
+      "DGBar.Domain.DTO.ErrorDTO": {
+        "System.Int32 DGBar.Domain.DTO.ErrorDTO::get_Code()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String DGBar.Domain.DTO.ErrorDTO::get_Message()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain.DTO\\InvoiceDTO.cs": {
+      "DGBar.Domain.DTO.InvoiceDTO": {
+        "System.Int32 DGBar.Domain.DTO.InvoiceDTO::get_OrderId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<DGBar.Domain.DTO.InvoiceProductDTO> DGBar.Domain.DTO.InvoiceDTO::get_Products()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Double DGBar.Domain.DTO.InvoiceDTO::get_Price()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Double DGBar.Domain.DTO.InvoiceDTO::get_Discount()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain.DTO\\InvoiceProductDTO.cs": {
+      "DGBar.Domain.DTO.InvoiceProductDTO": {
+        "System.Int32 DGBar.Domain.DTO.InvoiceProductDTO::get_ProductId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String DGBar.Domain.DTO.InvoiceProductDTO::get_Name()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Double DGBar.Domain.DTO.InvoiceProductDTO::get_Price()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 DGBar.Domain.DTO.InvoiceProductDTO::get_Quantity()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain.DTO\\OrderDTO.cs": {
+      "DGBar.Domain.DTO.OrderDTO": {
+        "System.Nullable`1<System.Int32> DGBar.Domain.DTO.OrderDTO::get_Id()": {
+          "Lines": {
+            "7": 20
+          },
+          "Branches": []
+        },
+        "System.String DGBar.Domain.DTO.OrderDTO::get_Status()": {
+          "Lines": {
+            "8": 16
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain.DTO\\OrderProductDTO.cs": {
+      "DGBar.Domain.DTO.OrderProductDTO": {
+        "System.Int32 DGBar.Domain.DTO.OrderProductDTO::get_OrderID()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.DTO.OrderDTO DGBar.Domain.DTO.OrderProductDTO::get_Order()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 DGBar.Domain.DTO.OrderProductDTO::get_ProductID()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.DTO.ProductDTO DGBar.Domain.DTO.OrderProductDTO::get_Product()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 DGBar.Domain.DTO.OrderProductDTO::get_Quantity()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Domain.DTO\\ProductDTO.cs": {
+      "DGBar.Domain.DTO.ProductDTO": {
+        "System.Nullable`1<System.Int32> DGBar.Domain.DTO.ProductDTO::get_Id()": {
+          "Lines": {
+            "9": 18
+          },
+          "Branches": []
+        },
+        "System.String DGBar.Domain.DTO.ProductDTO::get_Name()": {
+          "Lines": {
+            "10": 12
+          },
+          "Branches": []
+        },
+        "System.Double DGBar.Domain.DTO.ProductDTO::get_Price()": {
+          "Lines": {
+            "11": 12
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "DGBar.Infrastructure.CrossCutting.Adapter.dll": {
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.CrossCutting.Adapter\\Map\\MapperOrder.cs": {
+      "DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrder": {
+        "DGBar.Domain.Entities.Order DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrder::MapperToEntity(DGBar.Domain.DTO.OrderDTO)": {
+          "Lines": {
+            "15": 4,
+            "16": 4,
+            "17": 0,
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "24": 4,
+            "25": 4
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 7,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 18,
+              "Offset": 48,
+              "EndOffset": 50,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 48,
+              "EndOffset": 53,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 4
+            }
+          ]
+        },
+        "DGBar.Domain.DTO.OrderDTO DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrder::MapperToDTO(DGBar.Domain.Entities.Order)": {
+          "Lines": {
+            "28": 2,
+            "29": 2,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "37": 1,
+            "38": 2
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 29,
+              "Offset": 7,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 31,
+              "Offset": 38,
+              "EndOffset": 40,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 38,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderDTO> DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrder::MapperListOrders(System.Collections.Generic.IEnumerable`1<DGBar.Domain.Entities.Order>)": {
+          "Lines": {
+            "40": 1,
+            "41": 1,
+            "43": 9,
+            "44": 3,
+            "45": 3,
+            "46": 3,
+            "47": 3,
+            "48": 3,
+            "49": 3,
+            "51": 3,
+            "52": 3,
+            "54": 1,
+            "55": 1
+          },
+          "Branches": [
+            {
+              "Line": 43,
+              "Offset": 86,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 45,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 50,
+              "EndOffset": 59,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 43,
+              "Offset": 86,
+              "EndOffset": 88,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.Entities.Order> DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrder::MapperListOrdersToEntity(System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderDTO>)": {
+          "Lines": {
+            "58": 0,
+            "59": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": [
+            {
+              "Line": 61,
+              "Offset": 88,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 60,
+              "EndOffset": 62,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 63,
+              "Offset": 60,
+              "EndOffset": 65,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 61,
+              "Offset": 88,
+              "EndOffset": 90,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.CrossCutting.Adapter\\Map\\MapperOrderProduct.cs": {
+      "DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrderProduct": {
+        "DGBar.Domain.Entities.OrderProduct DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrderProduct::MapperToEntity(DGBar.Domain.DTO.OrderProductDTO)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": [
+            {
+              "Line": 18,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 18,
+              "Offset": 7,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "DGBar.Domain.DTO.OrderProductDTO DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrderProduct::MapperToDTO(DGBar.Domain.Entities.OrderProduct)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 7,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrderProduct::MapperListOrderProducts(System.Collections.Generic.IEnumerable`1<DGBar.Domain.Entities.OrderProduct>)": {
+          "Lines": {
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "65": 0,
+            "67": 0,
+            "68": 0
+          },
+          "Branches": [
+            {
+              "Line": 51,
+              "Offset": 141,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 141,
+              "EndOffset": 143,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperOrderProduct::.ctor()": {
+          "Lines": {
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.CrossCutting.Adapter\\Map\\MapperProduct.cs": {
+      "DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperProduct": {
+        "DGBar.Domain.Entities.Product DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperProduct::MapperToEntity(DGBar.Domain.DTO.ProductDTO)": {
+          "Lines": {
+            "15": 4,
+            "16": 4,
+            "17": 0,
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "25": 4,
+            "26": 4
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 7,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            }
+          ]
+        },
+        "DGBar.Domain.DTO.ProductDTO DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperProduct::MapperToDTO(DGBar.Domain.Entities.Product)": {
+          "Lines": {
+            "29": 2,
+            "30": 2,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "39": 1,
+            "40": 2
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 30,
+              "Offset": 7,
+              "EndOffset": 13,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.ProductDTO> DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperProduct::MapperListProducts(System.Collections.Generic.IEnumerable`1<DGBar.Domain.Entities.Product>)": {
+          "Lines": {
+            "42": 1,
+            "43": 1,
+            "45": 5,
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "49": 1,
+            "50": 1,
+            "51": 1,
+            "52": 1,
+            "54": 1,
+            "55": 1,
+            "57": 1,
+            "58": 1
+          },
+          "Branches": [
+            {
+              "Line": 45,
+              "Offset": 85,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 45,
+              "Offset": 85,
+              "EndOffset": 87,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.Entities.Product> DGBar.Infrastructure.CrossCutting.Adapter.Map.MapperProduct::MapperListProductsToEntity(System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.ProductDTO>)": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "76": 0,
+            "77": 0
+          },
+          "Branches": [
+            {
+              "Line": 64,
+              "Offset": 85,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 85,
+              "EndOffset": 87,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "DGBar.Infrastructure.CrossCutting.IOC.dll": {
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.CrossCutting.IOC\\ConfigurationIOC.cs": {
+      "DGBar.Infrastructure.CrossCutting.IOC.ConfigurationIOC": {
+        "System.Void DGBar.Infrastructure.CrossCutting.IOC.ConfigurationIOC::Load(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.CrossCutting.IOC\\ModuleIOC.cs": {
+      "DGBar.Infrastructure.CrossCutting.IOC.ModuleIOC": {
+        "System.Void DGBar.Infrastructure.CrossCutting.IOC.ModuleIOC::Load(Autofac.ContainerBuilder)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "DGBar.Infrastructure.Data.dll": {
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Repository\\BaseRepository.cs": {
+      "DGBar.Infrastructure.Data.Repository.BaseRepository`1": {
+        "System.Collections.Generic.IEnumerable`1<T> DGBar.Infrastructure.Data.Repository.BaseRepository`1::GetAll()": {
+          "Lines": {
+            "22": 2,
+            "23": 2,
+            "24": 2
+          },
+          "Branches": []
+        },
+        "T DGBar.Infrastructure.Data.Repository.BaseRepository`1::GetById(System.Int32)": {
+          "Lines": {
+            "27": 4,
+            "28": 4,
+            "29": 4
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Repository.BaseRepository`1::Add(T)": {
+          "Lines": {
+            "32": 8,
+            "33": 8,
+            "34": 8,
+            "35": 8
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Repository.BaseRepository`1::Edit(T)": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Repository.BaseRepository`1::Delete(T)": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Repository.BaseRepository`1::.ctor(DGBar.Infrastructure.Data.Context.Context)": {
+          "Lines": {
+            "17": 8,
+            "18": 8,
+            "19": 8,
+            "20": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Repository\\OrderProductRepository.cs": {
+      "DGBar.Infrastructure.Data.Repository.OrderProductRepository": {
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.Entities.OrderProduct> DGBar.Infrastructure.Data.Repository.OrderProductRepository::GetAllWithChilds()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.Entities.OrderProduct DGBar.Infrastructure.Data.Repository.OrderProductRepository::GetOrderProductByOrderIDAndProductId(System.Int32,System.Int32)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.Entities.OrderProduct> DGBar.Infrastructure.Data.Repository.OrderProductRepository::GetOrderProductByOrderId(System.Int32)": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.Entities.OrderProduct> DGBar.Infrastructure.Data.Repository.OrderProductRepository::GetAllWithChildsByOrderId(System.Int32)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Repository.OrderProductRepository::.ctor(DGBar.Infrastructure.Data.Context.Context)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Repository\\OrderRepository.cs": {
+      "DGBar.Infrastructure.Data.Repository.OrderRepository": {
+        "System.Void DGBar.Infrastructure.Data.Repository.OrderRepository::.ctor(DGBar.Infrastructure.Data.Context.Context)": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Repository\\ProductRepository.cs": {
+      "DGBar.Infrastructure.Data.Repository.ProductRepository": {
+        "System.Void DGBar.Infrastructure.Data.Repository.ProductRepository::.ctor(DGBar.Infrastructure.Data.Context.Context)": {
+          "Lines": {
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Migrations\\20200811084932_InitialMigration.cs": {
+      "DGBar.Infrastructure.Data.Migrations.InitialMigration": {
+        "System.Void DGBar.Infrastructure.Data.Migrations.InitialMigration::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Migrations.InitialMigration::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "76": 0,
+            "77": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Migrations\\20200811084932_InitialMigration.Designer.cs": {
+      "DGBar.Infrastructure.Data.Migrations.InitialMigration": {
+        "System.Void DGBar.Infrastructure.Data.Migrations.InitialMigration::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Migrations\\20200811184410_Add_Quantity_OrderProduct.cs": {
+      "DGBar.Infrastructure.Data.Migrations.Add_Quantity_OrderProduct": {
+        "System.Void DGBar.Infrastructure.Data.Migrations.Add_Quantity_OrderProduct::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Migrations.Add_Quantity_OrderProduct::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Migrations\\20200811184410_Add_Quantity_OrderProduct.Designer.cs": {
+      "DGBar.Infrastructure.Data.Migrations.Add_Quantity_OrderProduct": {
+        "System.Void DGBar.Infrastructure.Data.Migrations.Add_Quantity_OrderProduct::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "16": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "85": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Migrations\\ContextModelSnapshot.cs": {
+      "DGBar.Infrastructure.Data.Migrations.ContextModelSnapshot": {
+        "System.Void DGBar.Infrastructure.Data.Migrations.ContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "83": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Infrastructure.Data\\Context\\Context.cs": {
+      "DGBar.Infrastructure.Data.Context.Context": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<DGBar.Domain.Entities.Order> DGBar.Infrastructure.Data.Context.Context::get_Orders()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<DGBar.Domain.Entities.Product> DGBar.Infrastructure.Data.Context.Context::get_Products()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<DGBar.Domain.Entities.OrderProduct> DGBar.Infrastructure.Data.Context.Context::get_OrderProduct()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Context.Context::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "23": 1,
+            "24": 1,
+            "26": 1,
+            "27": 1,
+            "28": 1,
+            "29": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "36": 1,
+            "37": 1
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Context.Context::.ctor()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Infrastructure.Data.Context.Context::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<DGBar.Infrastructure.Data.Context.Context>)": {
+          "Lines": {
+            "15": 8,
+            "16": 8,
+            "17": 8
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "DGBar.Service.dll": {
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Service\\Services\\OrderProductService.cs": {
+      "DGBar.Service.Services.OrderProductService": {
+        "System.Void DGBar.Service.Services.OrderProductService::Add(DGBar.Domain.DTO.OrderProductDTO)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Service.Services.OrderProductService::GetAll()": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Service.Services.OrderProductService::GetAllWithChilds()": {
+          "Lines": {
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Service.Services.OrderProductService::GetAllWithChildsByOrderId(System.Int32)": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.DTO.OrderProductDTO DGBar.Service.Services.OrderProductService::GetById(System.Int32)": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Service.Services.OrderProductService::Delete(DGBar.Domain.DTO.OrderProductDTO)": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Service.Services.OrderProductService::Edit(DGBar.Domain.DTO.OrderProductDTO)": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.DTO.OrderProductDTO DGBar.Service.Services.OrderProductService::GetOrderProductByOrderIDAndProductId(System.Int32,System.Int32)": {
+          "Lines": {
+            "59": 0,
+            "60": 0,
+            "61": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderProductDTO> DGBar.Service.Services.OrderProductService::GetOrderProductByOrderId(System.Int32)": {
+          "Lines": {
+            "63": 0,
+            "64": 0,
+            "65": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.DTO.ErrorDTO DGBar.Service.Services.OrderProductService::CheckJuiceLimit(System.Int32)": {
+          "Lines": {
+            "68": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0
+          },
+          "Branches": [
+            {
+              "Line": 72,
+              "Offset": 27,
+              "EndOffset": 29,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 27,
+              "EndOffset": 42,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 45,
+              "EndOffset": 79,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void DGBar.Service.Services.OrderProductService::.ctor(DGBar.Domain.Interfaces.IOrderProductRepository,DGBar.Infrastructure.CrossCutting.Adapter.Interfaces.IMapperOrderProduct)": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Service\\Services\\OrderService.cs": {
+      "DGBar.Service.Services.OrderService": {
+        "System.Void DGBar.Service.Services.OrderService::Add(DGBar.Domain.DTO.OrderDTO)": {
+          "Lines": {
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 4
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.OrderDTO> DGBar.Service.Services.OrderService::GetAll()": {
+          "Lines": {
+            "32": 1,
+            "33": 1,
+            "34": 1
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.DTO.OrderDTO DGBar.Service.Services.OrderService::GetById(System.Int32)": {
+          "Lines": {
+            "37": 2,
+            "38": 2,
+            "39": 2
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Service.Services.OrderService::Delete(DGBar.Domain.DTO.OrderDTO)": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Service.Services.OrderService::Edit(DGBar.Domain.DTO.OrderDTO)": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.DTO.ErrorDTO DGBar.Service.Services.OrderService::CheckOrderStatus(System.Int32,DGBar.Domain.DTO.OrderDTO&)": {
+          "Lines": {
+            "52": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0
+          },
+          "Branches": [
+            {
+              "Line": 55,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 12,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 55,
+              "Offset": 36,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void DGBar.Service.Services.OrderService::.ctor(DGBar.Domain.Interfaces.IOrderRepository,DGBar.Infrastructure.CrossCutting.Adapter.Interfaces.IMapperOrder)": {
+          "Lines": {
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\NoteFamilia\\Documents\\git\\DGBar\\API\\DGBar.Service\\Services\\ProductService.cs": {
+      "DGBar.Service.Services.ProductService": {
+        "System.Void DGBar.Service.Services.ProductService::Add(DGBar.Domain.DTO.ProductDTO)": {
+          "Lines": {
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 4
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<DGBar.Domain.DTO.ProductDTO> DGBar.Service.Services.ProductService::GetAll()": {
+          "Lines": {
+            "32": 1,
+            "33": 1,
+            "34": 1
+          },
+          "Branches": []
+        },
+        "DGBar.Domain.DTO.ProductDTO DGBar.Service.Services.ProductService::GetById(System.Int32)": {
+          "Lines": {
+            "37": 2,
+            "38": 2,
+            "39": 2
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Service.Services.ProductService::Delete(DGBar.Domain.DTO.ProductDTO)": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Service.Services.ProductService::Edit(DGBar.Domain.DTO.ProductDTO)": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        },
+        "System.Void DGBar.Service.Services.ProductService::.ctor(DGBar.Domain.Interfaces.IProductRepository,DGBar.Infrastructure.CrossCutting.Adapter.Interfaces.IMapperProduct)": {
+          "Lines": {
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4,
+            "22": 4
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
