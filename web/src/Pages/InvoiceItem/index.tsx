@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent } from 'react';
 
 import {
   Grid,
@@ -13,6 +13,7 @@ import {
 } from '@material-ui/core';
 import api from '../../Service/api';
 import './styles.css';
+import { useHistory } from 'react-router-dom';
 
 export interface Products {
   productId: number;
@@ -31,6 +32,7 @@ interface InvoiceProps {
 }
 
 const InvoiceItem: React.FC<InvoiceProps> = ({ invoice }) => {
+  const history = useHistory();
   function closeOrder(e: FormEvent) {
     e.preventDefault();
 
@@ -39,6 +41,9 @@ const InvoiceItem: React.FC<InvoiceProps> = ({ invoice }) => {
     api
       .post('Invoice', {
         orderId,
+        headers: {
+          Authorization: 'Bearer ' + globalThis.token,
+        },
       })
       .then(() => {
         alert('Comanda fechada com sucesso');
@@ -63,16 +68,16 @@ const InvoiceItem: React.FC<InvoiceProps> = ({ invoice }) => {
         data: {
           orderId: orderId,
         },
+        headers: {
+          Authorization: 'Bearer ' + globalThis.token,
+        },
       })
       .then(() => {
         alert('Comanda resetada com sucesso');
+        history.push('/products');
       })
       .catch(function (error) {
-        if (error.response) {
-          alert(error.response.data);
-        } else if (error.message) {
-          alert(error.message);
-        } else alert(error);
+        alert('Comanda já está fechada, não é possivel resetar');
       });
   };
 

@@ -19,6 +19,7 @@ namespace DGBar.Infrastructure.CrossCutting.IOC
             builder.RegisterType<OrderService>().As<IOrderService>();
             builder.RegisterType<ProductService>().As<IProductService>();
             builder.RegisterType<OrderProductService>().As<IOrderProductService>();
+            builder.RegisterType<TokenService>().As<ITokenService>();
 
 
             builder.RegisterType<OrderRepository>().As<IOrderRepository>();

@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using DGBar.Domain.DTO;
 using DGBar.Domain.Entities;
 using DGBar.Domain.Interfaces.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.Operations;

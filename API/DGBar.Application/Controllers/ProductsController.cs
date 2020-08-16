@@ -8,12 +8,14 @@ using Microsoft.EntityFrameworkCore;
 using DGBar.Domain.Entities;
 using DGBar.Domain.Interfaces.Services;
 using DGBar.Domain.DTO;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DGBar.Application.Controllers
 {
     [Produces("application/json")]
     [Route("[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _ProductService;

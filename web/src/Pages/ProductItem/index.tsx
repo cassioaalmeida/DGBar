@@ -25,11 +25,16 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, order }) => {
         orderId,
         productId,
         quantity: 1,
+        headers: {
+          Authorization: `Bearer ${globalThis.token}`,
+        },
       })
-      .then(() => {
+      .then((res) => {
+        console.log(res);
         alert('Produto inserido na comanda');
       })
       .catch(function (error) {
+        console.log(error);
         if (error.response) {
           alert(error.response.data);
         } else if (error.message) {

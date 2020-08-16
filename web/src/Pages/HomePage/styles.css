@@ -1,0 +1,10 @@
+.Home-Form {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin: 10rem;
+}
+.Home-Form button {
+  width: 20rem;
+  height: 5rem;
+}

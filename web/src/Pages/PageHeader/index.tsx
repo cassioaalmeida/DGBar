@@ -42,7 +42,10 @@ function PageHeader() {
             onClose={handleClose}
           >
             <MenuItem onClick={handleClose}>
-              <NavLink to='/'> Products </NavLink>
+              <NavLink to='/'> Home </NavLink>
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              <NavLink to='/products'> Products </NavLink>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <NavLink to='/close-order'> Close Order </NavLink>

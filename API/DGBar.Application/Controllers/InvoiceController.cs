@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DGBar.Domain.DTO;
 using DGBar.Domain.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
