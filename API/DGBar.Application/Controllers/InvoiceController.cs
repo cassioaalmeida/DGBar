@@ -27,7 +27,7 @@ namespace DGBar.Application.Controllers
         }
 
         [HttpPost]
-        public ActionResult<OrderProductDTO> GenerateInvoice(InvoiceParm invoiceParm)
+        public ActionResult<InvoiceDTO> GenerateInvoice(InvoiceParm invoiceParm)
         {
             OrderDTO order = null;
 
@@ -45,10 +45,10 @@ namespace DGBar.Application.Controllers
             _OrderService.Edit(order);
 
 
-            return Ok(invoice);
+            return invoice;
         }
         [HttpGet]
-        public ActionResult<OrderProductDTO> PreviewInvoice(int orderId)
+        public ActionResult<InvoiceDTO> PreviewInvoice(int orderId)
         {
             OrderDTO order = _OrderService.GetById(orderId);
 
@@ -56,7 +56,7 @@ namespace DGBar.Application.Controllers
 
             CalculateInvoicePrice(invoice);
 
-            return Ok(invoice);
+            return invoice;
         }
 
         private void CalculateInvoicePrice(InvoiceDTO invoice)

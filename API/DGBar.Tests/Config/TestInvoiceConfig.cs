@@ -13,24 +13,21 @@ namespace DGBar.Tests.Config
     public class TestInvoiceConfig
     {
         public InvoiceController InvoiceController;
-        public TestInvoiceConfig()
+        public TestInvoiceConfig(string dbname, ContextConfig contextConfig)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<Context>();
-            optionsBuilder.UseInMemoryDatabase(databaseName: "TestsDB")
-                .EnableSensitiveDataLogging()
-                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            Context context = contextConfig.getContext(dbname);
             InvoiceController = new InvoiceController(
                 new OrderProductService(
                     new OrderProductRepository(
-                        new Context(optionsBuilder.Options)),
+                        context),
                     new MapperOrderProduct()),
                 new OrderService(
                     new OrderRepository(
-                        new Context(optionsBuilder.Options)),
+                        context),
                     new MapperOrder()),
                 new ProductService(
                     new ProductRepository(
-                        new Context(optionsBuilder.Options)),
+                        context),
                     new MapperProduct())
                 );
         }

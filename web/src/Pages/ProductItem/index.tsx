@@ -24,6 +24,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, order }) => {
       .post('Request', {
         orderId,
         productId,
+        quantity: 1,
       })
       .then(() => {
         alert('Produto inserido na comanda');

@@ -36,7 +36,8 @@ namespace DGBar.Tests.Tests
 
         public TestOrder()
         {
-            _testOrder = new TestOrderConfig();
+            ContextConfig contextConfig = new ContextConfig();
+            _testOrder = new TestOrderConfig(Util.Util.RandomString(10), contextConfig);
         }
         [Fact]
         public void CreateOrder()

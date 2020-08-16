@@ -18,7 +18,7 @@ namespace DGBar.Domain.Interfaces.Services
 
         void Delete(OrderProductDTO obj);
 
-        ErrorDTO CheckJuiceLimit(int order_id);
+        ErrorDTO CheckJuiceLimit(int order_id, int quantity);
 
         OrderProductDTO GetOrderProductByOrderIDAndProductId(int order_id, int product_id);
         IEnumerable<OrderProductDTO> GetOrderProductByOrderId(int order_id);

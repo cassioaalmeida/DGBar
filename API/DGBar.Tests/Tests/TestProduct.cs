@@ -36,57 +36,26 @@ namespace DGBar.Tests.Tests
 
         public TestProduct()
         {
-            _testProduct = new TestProductConfig();
+            ContextConfig contextConfig = new ContextConfig();
+            _testProduct = new TestProductConfig(Util.Util.RandomString(10), contextConfig);
+            Util.Util.LoadProducts(_testProduct);
         }
         [Fact]
         public void CreateProducts()
         {
-            ProductDTO product = new ProductDTO()
-            {
-                Name = "Cerveja",
-                Price = 5
-            };
-
-            var actionResult = _testProduct.ProductController.PostProduct(product);
-
-            Assert.NotNull(actionResult);
-            Assert.IsType<ActionResult<ProductDTO>>(actionResult);
-        }
-        [Fact]
-        public void GetProducts()
-        {
-            ProductDTO product = new ProductDTO()
-            {
-                Name = "Cerveja",
-                Price = 5
-            };
-
-
-            var actionResult = _testProduct.ProductController.PostProduct(product);
 
             var result = _testProduct.ProductController.GetProducts();
 
             Assert.NotNull(result);
             Assert.IsType<ActionResult<IEnumerable<ProductDTO>>>(result);
-            
 
-            result.Value.ToList().Should().HaveCountGreaterOrEqualTo(1);
+
+            result.Value.ToList().Should().HaveCount(4);
         }
         [Fact]
         public void GetProductByWrongID()
         {
-            ProductDTO product = new ProductDTO()
-            {
-                Name = "Cerveja",
-                Price = 5
-            };
-
-
-            var actionResult = _testProduct.ProductController.PostProduct(product);
-
             var result = _testProduct.ProductController.GetProduct(10);
-
-            product.Id = 1;
 
             Assert.NotNull(result);
             Assert.IsType<ActionResult<ProductDTO>>(result);
@@ -97,16 +66,12 @@ namespace DGBar.Tests.Tests
         {
             ProductDTO product = new ProductDTO()
             {
+                Id = 1,
                 Name = "Cerveja",
                 Price = 5
             };
 
-
-            var actionResult = _testProduct.ProductController.PostProduct(product);
-
             var result = _testProduct.ProductController.GetProduct(1);
-
-            product.Id = 1;
 
             Assert.NotNull(result);
             Assert.IsType<ActionResult<ProductDTO>>(result);

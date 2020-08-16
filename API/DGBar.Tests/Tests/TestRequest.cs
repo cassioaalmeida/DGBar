@@ -27,6 +27,7 @@ using System.Threading.Tasks;
 using Xunit;
 using FluentAssertions;
 using DGBar.Tests.Config;
+using System.Net;
 
 namespace DGBar.Tests.Tests
 {
@@ -38,9 +39,12 @@ namespace DGBar.Tests.Tests
 
         public TestRequest()
         {
-            _testRequest = new TestRequestConfig();
-            _testOrder = new TestOrderConfig();
-            _testProduct = new TestProductConfig();
+            ContextConfig contextConfig = new ContextConfig();
+            string var = Util.Util.RandomString(10);
+            _testRequest = new TestRequestConfig(var, contextConfig);
+            _testOrder = new TestOrderConfig(var, contextConfig);
+            _testProduct = new TestProductConfig(var, contextConfig);
+            Util.Util.LoadProducts(_testProduct);
         }
         [Fact]
         public void CreateRequest()
@@ -49,16 +53,9 @@ namespace DGBar.Tests.Tests
 
             var orderResult = _testOrder.OrderController.PostOrder(order);
 
-            ProductDTO product = new ProductDTO()
-            {
-                Name = "Cerveja",
-                Price = 5
-            };
-
-            var productResult = _testProduct.ProductController.PostProduct(product);
-
             var actionResult = _testRequest.RequestController
                 .RequestProductForOrder(new RequestParms(){ OrderId = 1, ProductId = 1 });
+
 
             Assert.NotNull(actionResult);
             Assert.IsType<ActionResult<OrderProductDTO>>(actionResult);
@@ -69,14 +66,6 @@ namespace DGBar.Tests.Tests
             OrderDTO order = new OrderDTO();
 
             var orderResult = _testOrder.OrderController.PostOrder(order);
-
-            ProductDTO product = new ProductDTO()
-            {
-                Name = "Cerveja",
-                Price = 5
-            };
-
-            var productResult = _testProduct.ProductController.PostProduct(product);
 
             var actionResult = _testRequest.RequestController
                 .RequestProductForOrder(new RequestParms() { OrderId = 1, ProductId = 1 });
@@ -90,38 +79,51 @@ namespace DGBar.Tests.Tests
             result.Value.ToList().Should().HaveCountGreaterOrEqualTo(1);
         }
         [Fact]
-        public void GetOrderByWrongID()
+        public void CreateRequestWithInvalidOrder()
         {
-            OrderDTO order = new OrderDTO();
+            var actionResult = _testRequest.RequestController
+                .RequestProductForOrder(new RequestParms() { OrderId = 55, ProductId = 1, Quantity = 1 });
 
+            var result = _testRequest.RequestController.GetRequests(1);
 
-            var actionResult = _testRequest.OrderController.PostOrder(order);
+            var dummy = _testRequest.RequestController.ResetRequest(new InvoiceParm() { orderId = 1 });
 
-            var result = _testRequest.OrderController.GetOrder(10);
-
-            order.Id = 1;
-            order.Status = "Open";
-
-            Assert.NotNull(result);
-            Assert.IsType<ActionResult<OrderDTO>>(result);
-            result.Value.Should().BeNull();
+            Assert.IsType<ActionResult<IEnumerable<OrderProductDTO>>>(result);
+            result.Value.ToList().Should().HaveCount(0);
         }
         [Fact]
-        public void GetOrderByID()
+        public void CreateRequestWithInvalidProduct()
         {
             OrderDTO order = new OrderDTO();
 
+            var orderResult = _testOrder.OrderController.PostOrder(order);
 
-            var actionResult = _testRequest.OrderController.PostOrder(order);
+            var actionResult = _testRequest.RequestController
+                .RequestProductForOrder(new RequestParms() { OrderId = 1, ProductId = 1, Quantity = 1 });
 
-            var result = _testRequest.OrderController.GetOrder(1);
+            var result = _testRequest.RequestController.GetRequests(1);
 
-            order.Id = 1;
-            order.Status = "Open";
-
-            Assert.NotNull(result);
-            Assert.IsType<ActionResult<OrderDTO>>(result);
-            result.Value.Should().BeEquivalentTo(order);
+            Assert.IsType<ActionResult<IEnumerable<OrderProductDTO>>>(result);
+            result.Value.ToList().Should().HaveCountGreaterOrEqualTo(1);
         }
+        [Fact]
+        public void CreateRequestWithMoreThan3Juices()
+        {
+            OrderDTO order = new OrderDTO();
+
+            var orderResult = _testOrder.OrderController.PostOrder(order);
+
+
+            Util.Util.LoadProducts(_testProduct);
+
+            var actionResult = _testRequest.RequestController
+                .RequestProductForOrder(new RequestParms() { OrderId = 1, ProductId = 3, Quantity = 5 });
+
+            var result = _testRequest.RequestController.GetRequests(1);
+
+            Assert.IsType<ActionResult<IEnumerable<OrderProductDTO>>>(result);
+            result.Value.ToList().Should().HaveCount(0);
+        }
+
     }
 }

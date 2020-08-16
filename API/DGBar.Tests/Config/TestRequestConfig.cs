@@ -13,24 +13,21 @@ namespace DGBar.Tests.Config
     public class TestRequestConfig
     {
         public RequestController RequestController;
-        public TestRequestConfig()
+        public TestRequestConfig(string dbname, ContextConfig contextConfig)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<Context>();
-            optionsBuilder.UseInMemoryDatabase(databaseName: "TestsDB")
-                .EnableSensitiveDataLogging()
-                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            Context context = contextConfig.getContext(dbname);
             RequestController = new RequestController(
                 new OrderProductService(
                     new OrderProductRepository(
-                        new Context(optionsBuilder.Options)),
+                        context),
                     new MapperOrderProduct()),
                 new OrderService(
                     new OrderRepository(
-                        new Context(optionsBuilder.Options)),
+                        context),
                     new MapperOrder()),
                 new ProductService(
                     new ProductRepository(
-                        new Context(optionsBuilder.Options)),
+                        context),
                     new MapperProduct())
                 );
         }

@@ -45,35 +45,6 @@ namespace DGBar.Application.Controllers
             return order;
         }
 
-        // PUT: api/Orders/5
-        [HttpPut("{id}")]
-        public IActionResult PutOrder(int id, OrderDTO order)
-        {
-            if (id != order.Id)
-            {
-                return BadRequest();
-            }
-
-
-            try
-            {
-                _Orderservice.Edit(order);
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!OrderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
         // POST: api/Orders
         [HttpPost]
         public ActionResult<OrderDTO> PostOrder([FromBody] OrderDTO orderDTO)

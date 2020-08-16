@@ -65,7 +65,7 @@ namespace DGBar.Application.Controllers
 
             if (productId == 3)
             {
-                error = _OrderProductService.CheckJuiceLimit(orderId);
+                error = _OrderProductService.CheckJuiceLimit(orderId, req.Quantity>0?(int)req.Quantity:1);
 
                 if (error != null)
                     return StatusCode(error.Code, error.Message);
@@ -81,13 +81,19 @@ namespace DGBar.Application.Controllers
                 request.OrderID = orderId;
                 //request.Product = product;
                 request.ProductID = productId;
-                request.Quantity = 1;
+                if (req.Quantity > 0)
+                    request.Quantity = (int)req.Quantity;
+                else
+                    request.Quantity = 1;
 
                 _OrderProductService.Add(request);
             }
             else
             {
-                request.Quantity += 1;
+                if (req.Quantity > 0)
+                    request.Quantity += (int)req.Quantity;
+                else
+                    request.Quantity += 1;
 
                 _OrderProductService.Edit(request);
             }
@@ -118,5 +124,6 @@ namespace DGBar.Application.Controllers
     {
         public int OrderId { get; set; }
         public int ProductId { get; set; }
+        public int? Quantity { get; set; }
     }
 }
